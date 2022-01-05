@@ -62,6 +62,23 @@ return packer.startup(function(use)
     end,
   }
 
+  -- Completion
+  use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+      'hrsh7th/cmp-buffer', -- Buffer completions
+      'hrsh7th/cmp-path', -- Path completions
+      'hrsh7th/cmp-cmdline', -- Command line completions
+      'hrsh7th/cmp-nvim-lsp', -- Neovim LSP completions
+      'hrsh7th/cmp-nvim-lua', -- Neovim Lua completions
+      'saadparwaiz1/cmp_luasnip', -- Snippet completions
+    },
+  }
+
+  -- Snippets
+  use 'L3MON4D3/LuaSnip' -- Snippet engine
+  use 'rafamadriz/friendly-snippets' -- A bunch of snippets
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
