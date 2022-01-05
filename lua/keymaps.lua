@@ -62,3 +62,15 @@ keymap('t', '<C-h>', '<C-\\><C-N><C-w>h', term_opts)
 keymap('t', '<C-j>', '<C-\\><C-N><C-w>j', term_opts)
 keymap('t', '<C-k>', '<C-\\><C-N><C-w>k', term_opts)
 keymap('t', '<C-l>', '<C-\\><C-N><C-w>l', term_opts)
+
+-- NvimTree
+keymap('n', '<C-b>', ':NvimTreeToggle<CR>', opts)
+
+-- Bufferline
+keymap('n', '<C-w>', ':bdelete!<CR>', opts)
+
+-- Telescope
+keymap('n', '<C-f>',
+       ":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
+       opts)
+keymap('n', '<C-g>', ':Telescope live_grep<CR>', opts)

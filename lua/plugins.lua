@@ -48,6 +48,20 @@ return packer.startup(function(use)
   -- Aesthetic
   use 'LunarVim/darkplus.nvim'
 
+  -- NvimTree
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- file icons
+      'akinsho/bufferline.nvim', -- bufferline
+      'moll/vim-bbye',
+    },
+    config = function()
+      require'nvim-tree'.setup {}
+      require'bufferline'.setup {}
+    end,
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
