@@ -79,6 +79,12 @@ return packer.startup(function(use)
   use 'L3MON4D3/LuaSnip' -- Snippet engine
   use 'rafamadriz/friendly-snippets' -- A bunch of snippets
 
+  -- LSP
+  use {
+    'williamboman/nvim-lsp-installer', -- Neovim language server installer
+    requires = { 'neovim/nvim-lspconfig' },
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
