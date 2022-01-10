@@ -88,6 +88,9 @@ return packer.startup(function(use)
   -- Null LS
   use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
 
+  -- Telescope
+  use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
