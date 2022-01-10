@@ -91,6 +91,21 @@ return packer.startup(function(use)
   -- Telescope
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
 
+  -- Treesitter
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
+  -- Autopairs, integrates with both cmp and treesitter
+  use {
+    'windwp/nvim-autopairs',
+    config = function()
+      require'nvim-autopairs'.setup {}
+    end,
+  }
+
+  -- Comment, `gc` to comment
+  use 'numToStr/Comment.nvim'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
