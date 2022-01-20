@@ -74,3 +74,6 @@ keymap('n', '<C-f>',
        ":lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
        opts)
 keymap('n', '<C-g>', ':Telescope live_grep<CR>', opts)
+
+-- Copy the whole file
+keymap('n', '<C-a>', ':w<CR>:%w !pbcopy<CR><CR>', opts)
