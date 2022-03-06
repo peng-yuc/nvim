@@ -11,3 +11,4 @@ end
 
 sourceLuaFiles('')
 sourceLuaFiles('plugins/')
+sourceLuaFiles('cpp/')
