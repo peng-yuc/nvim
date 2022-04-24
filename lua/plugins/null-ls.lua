@@ -26,7 +26,7 @@ _G.formatting = function(bufnr, options, timeout_ms)
   local result, err = client.request_sync('textDocument/formatting', params,
                                           timeout_ms, bufnr)
   if result and result.result then
-    vim.lsp.util.apply_text_edits(result.result, bufnr)
+    vim.lsp.util.apply_text_edits(result.result, bufnr, client.offset_encoding)
   elseif err then
     vim.notify('vim.lsp.buf.formatting_sync: ' .. err, vim.log.levels.WARN)
   end
