@@ -6,7 +6,7 @@ end
 configs.setup {
   autopairs = { enable = true },
   context_commentstring = { enable = true, enable_autocmd = false },
-  ensure_installed = 'maintained', -- one of 'all', 'maintained' (parsers with maintainers), or a list of languages
+  ensure_installed = { 'cpp', 'java', 'python' },
   ignore_install = { '' }, -- List of parsers to ignore installing
   indent = { enable = false },
   highlight = {
